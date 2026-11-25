@@ -41,7 +41,7 @@ runs:
     # On Windows arm64 a bare version request gets uv the x86_64
     # (emulated) interpreter, so ask for the aarch64 one by name.
     - name: Setup python
-      uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+      uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
       with:
         version-file: ${{ inputs.uv-version-file }}
         python-version: ${{ inputs.arch == 'arm64' && format('cpython-{0}-windows-aarch64-none', inputs.python-version) || inputs.python-version }}
